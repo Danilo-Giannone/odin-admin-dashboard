@@ -1,1 +1,2 @@
 # odin-admin-dashboard
+ABOUT this project highlights the ability to use html, css and js to produce a working and visually pleasing admin dashboard; a particular focus into the usage of grid. Part of The Odin Project curriculum.
