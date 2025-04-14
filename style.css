@@ -124,3 +124,26 @@ body {
     flex-direction: column;
     gap: 1rem;
 }
+.header > .top{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.top > .search{
+    display:flex;
+    flex: 5;
+}
+.search > .icon{
+    flex:1;
+}
+.search > .bar{
+    flex: 8;
+    background-color: grey;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+.top > .info{
+    flex: 3;
+    display: flex;
+    justify-content: space-evenly;
+}
