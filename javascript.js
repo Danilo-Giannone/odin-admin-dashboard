@@ -47,7 +47,7 @@ let trendingTitles = [
 ];
 
 createAnnouncement();
-//createTrending();
+createTrending();
 for (let i = 0; i < projectTitles.length; i++) {
     createCard(i);
 }
@@ -69,7 +69,7 @@ function createAnnouncement() {
 
         announcementContainer.appendChild(announcement);
 
-        if(i+1 != announcementTitles.length){
+        if (i + 1 != announcementTitles.length) {
             let gap = document.createElement("div");
             gap.classList.add("gap");
             announcementContainer.appendChild(gap);
@@ -78,7 +78,35 @@ function createAnnouncement() {
 }
 
 function createTrending() {
+    for (let i = 0; i < trendingNames.length; i++) {
+        let trend = document.createElement("div");
+        trend.classList.add("trendingelement");
 
+        let profilePicture = document.createElement("div");
+        profilePicture.classList.add("profilepicture");
+        let icon = document.createElement("img");
+        icon.src = "./assets/icons/person_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
+        profilePicture.appendChild(icon);
+
+        trend.appendChild(profilePicture);
+
+        let trendText = document.createElement("div");
+        trendText.classList.add("trendingtext");
+
+        let trendName = document.createElement("div");
+        trendName.classList.add("trendname");
+        trendName.textContent = trendingNames[i];
+        trendText.appendChild(trendName);
+
+        let trendTitle = document.createElement("div");
+        trendTitle.classList.add("trendtitle");
+        trendTitle.textContent = trendingTitles[i];
+        trendText.appendChild(trendTitle);
+
+        trend.appendChild(trendText);
+
+        trendingContainer.appendChild(trend);
+    }
 }
 
 function createCard(i) {

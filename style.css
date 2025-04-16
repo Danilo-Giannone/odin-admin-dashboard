@@ -151,7 +151,7 @@ body {
     display: flex;
 }
 
-.info>.profilepicture {
+.profilepicture {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     padding: 1%;
@@ -161,7 +161,8 @@ body {
     align-items: center;
 }
 
-.top>.info>.profilepicture {
+.top>.info>.profilepicture,
+.trendingelement > .profilepicture{
 
     min-width: 24px;
     min-height: 24px;
@@ -169,7 +170,8 @@ body {
     max-width: 26px;
 }
 
-.top>.info>.profilepicture>img {
+.top>.info>.profilepicture>img ,
+.trendingelement > .profilepicture > img{
     height: 24px;
     width: 24px;
 }
@@ -339,10 +341,12 @@ body {
     font-weight: bold;
 
 }
-.announcements > .title{
+.announcements > .title,
+.trending > .title{
     font-weight: bold;
 }
-.announcements > .container{
+.announcements > .container,
+.trending > .container{
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
@@ -352,13 +356,15 @@ body {
     margin: 1.5rem 0;
     padding: 0.5rem;
 }
-.announcementtitle{
+.announcementtitle,
+.trendname{
     font-weight: bold;
     margin-bottom: 0.2rem;
     font-size: 0.9rem;
     text-align: center;
 }
-.announcementbody{
+.announcementbody,
+.trendtitle{
     font-size: 0.8rem;
     text-align: center;
 }
@@ -368,4 +374,10 @@ body {
     background-color: black;
     align-self: center;
     margin: 0.5rem 0;
+}
+.trendingelement {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 1rem;
 }
